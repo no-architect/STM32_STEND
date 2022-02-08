@@ -1,0 +1,4489 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabelSettings",
+            "X": 420,
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_FRGX",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonUp",
+            "X": 6,
+            "Y": 97,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_WFXC",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonDown",
+            "X": 6,
+            "Y": 157,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_SQTY",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textCounter",
+            "X": 119,
+            "Y": 145,
+            "Width": 50,
+            "Height": 26,
+            "TextId": "__SingleUse_M1WA",
+            "TextRotation": "0",
+            "LineSpacing": 1,
+            "Wildcard1": {
+              "TextId": "__SingleUse_UI9G",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "SWButtonHWLED",
+            "X": 240,
+            "Y": 127,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "TextId": "__SingleUse_8JK1",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "SWButtonSWLED",
+            "X": 413,
+            "Y": 127,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "TextId": "__SingleUse_Z1PA",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Image",
+            "Name": "SwLedOff",
+            "X": 324,
+            "Y": 128,
+            "Width": 60,
+            "Height": 60,
+            "RelativeFilename": "__designer\\Blue_Buttons_Square_icon_button_pressed.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "SwLedOn",
+            "X": 324,
+            "Y": 128,
+            "Width": 60,
+            "Height": 60,
+            "Visible": false,
+            "RelativeFilename": "__designer\\Dark_Buttons_Square_icon_button_pressed.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textTemp",
+            "X": 119,
+            "Y": 25,
+            "Width": 265,
+            "Height": 30,
+            "TextId": "__SingleUse_D9Z5",
+            "TextRotation": "0",
+            "LineSpacing": 1,
+            "Wildcard1": {
+              "TextId": "__SingleUse_B9N4",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabelSettings"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "ScreenTable"
+            }
+          },
+          {
+            "InteractionName": "btnUP",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonUp"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonUpClick"
+            }
+          },
+          {
+            "InteractionName": "btnDOWN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonDown"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonDownClick"
+            }
+          },
+          {
+            "InteractionName": "btnSETTINGS",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabelSettings"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "saveSettings"
+            }
+          },
+          {
+            "InteractionName": "SWToggleSWLED",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SWButtonSWLED"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->swButtonSwLedToggle();"
+            }
+          },
+          {
+            "InteractionName": "SWToggleHWLED",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SWButtonHWLED"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "presenter->swButtonHwLedToggle();"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ScreenSettings",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 92,
+              "Green": 92,
+              "Blue": 92
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "Width": 480,
+            "Height": 50,
+            "Color": {
+              "Red": 227,
+              "Green": 185
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 215,
+            "Y": 13,
+            "Width": 51,
+            "Height": 25,
+            "TextId": "__SingleUse_XY8W",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabelOk",
+            "X": 419,
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_0I27",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabelCancel",
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_N999",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 197,
+            "Y": 74,
+            "Width": 252,
+            "Height": 50,
+            "Color": {
+              "Red": 133,
+              "Green": 133,
+              "Blue": 133
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1",
+            "X": 198,
+            "Y": 136,
+            "Width": 252,
+            "Height": 50,
+            "Color": {
+              "Red": 133,
+              "Green": 133,
+              "Blue": 133
+            },
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 127,
+            "Y": 87,
+            "Width": 51,
+            "Height": 25,
+            "TextId": "__SingleUse_KSRP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3",
+            "X": 86,
+            "Y": 148,
+            "Width": 94,
+            "Height": 25,
+            "TextId": "__SingleUse_Y032",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaPw",
+            "X": 207,
+            "Y": 148,
+            "Width": 234,
+            "Height": 26,
+            "TextId": "__SingleUse_CWWN",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 18
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaSsid",
+            "X": 206,
+            "Y": 86,
+            "Width": 234,
+            "Height": 26,
+            "TextId": "__SingleUse_4HBC",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 18
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButtonSsid",
+            "X": 198,
+            "Y": 74,
+            "Width": 251,
+            "Height": 50,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 251,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButtonPw",
+            "X": 199,
+            "Y": 135,
+            "Width": 251,
+            "Height": 50,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 251,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ButtonCancel",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabelCancel"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1"
+            }
+          },
+          {
+            "InteractionName": "ButtonSsid",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonSsid"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call ScreenSettings keyboardSelectedVar",
+              "ParameterValue": "0",
+              "ActionComponent": "ScreenSettings"
+            }
+          },
+          {
+            "InteractionName": "ButtonPw",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButtonPw"
+            },
+            "Action": {
+              "Type": "ActionCustom2",
+              "ActionCustomTypeName": "Call ScreenSettings keyboardSelectedVar",
+              "ParameterValue": "1",
+              "ActionComponent": "ScreenSettings"
+            }
+          },
+          {
+            "InteractionName": "KeyboardSelected",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call ScreenSettings keyboardSelectedVar"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "keyboardSelected"
+            }
+          },
+          {
+            "InteractionName": "ChangeToScreenKeyboard",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "KeyboardSelected"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ScreenKeyboard"
+            }
+          },
+          {
+            "InteractionName": "UpdateScreen",
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "updateScreen"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "keyboardSelectedVar",
+            "HasValue": true,
+            "ValueType": "uint8_t"
+          }
+        ]
+      },
+      {
+        "Name": "ScreenKeyboard",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 92,
+              "Green": 92,
+              "Blue": 92
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabelCancel",
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_ZIHB",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabelOk",
+            "X": 419,
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_CMGJ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ButtonCancel",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabelCancel"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ScreenSettings"
+            }
+          },
+          {
+            "InteractionName": "ButtonOk",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabelOk"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "getBuffer"
+            }
+          },
+          {
+            "InteractionName": "ChangeToScreenSettings",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "ButtonOk"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "ScreenSettings"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ScreenTable",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            }
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line2",
+            "X": 15,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line3",
+            "X": 45,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line4",
+            "X": 50,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line5",
+            "X": 80,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line6",
+            "X": 85,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line7",
+            "X": 115,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line8",
+            "X": 120,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line9",
+            "X": 150,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line10",
+            "X": 155,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line11",
+            "X": 185,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line12",
+            "X": 190,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line13",
+            "X": 220,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line14",
+            "X": 225,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line15",
+            "X": 255,
+            "Width": 2,
+            "Height": 272,
+            "Visible": false,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line16",
+            "X": 260,
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line17",
+            "X": 290,
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line18",
+            "X": 295,
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line19",
+            "X": 325,
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line20",
+            "X": 330,
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line21",
+            "X": 360,
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line22",
+            "X": 376,
+            "Width": 4,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 4,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor1",
+            "Width": 480,
+            "Height": 2,
+            "EndX": 480,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor2",
+            "Y": 16,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 480,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor3",
+            "Y": 46,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor4",
+            "Y": 51,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor5",
+            "Y": 81,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor6",
+            "Y": 86,
+            "Width": 480,
+            "Height": 2,
+            "Visible": false,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor7",
+            "Y": 116,
+            "Width": 480,
+            "Height": 2,
+            "Visible": false,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor8",
+            "Y": 121,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor9",
+            "Y": 151,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor10",
+            "Y": 156,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor11",
+            "Y": 186,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor12",
+            "Y": 191,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor13",
+            "Y": 221,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor14",
+            "Y": 226,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 376,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor15",
+            "Y": 256,
+            "Width": 480,
+            "Height": 2,
+            "EndX": 480,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 398,
+            "Y": 22,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 16,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 50,
+              "Green": 173,
+              "Blue": 50
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textTemp1",
+            "X": 16,
+            "Y": 25,
+            "Width": 30,
+            "Height": 13,
+            "TextId": "__SingleUse_IAD4",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum1",
+            "X": 28,
+            "Y": 25,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_G2NF",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1",
+            "X": 51,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 221
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum2",
+            "X": 63,
+            "Y": 25,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_QE8W",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_1",
+            "X": 86,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 255,
+              "Green": 31,
+              "Blue": 31
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum3",
+            "X": 98,
+            "Y": 25,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_IAKK",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_1_1",
+            "X": 121,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum4",
+            "X": 132,
+            "Y": 25,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_59Z9",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 380,
+            "Y": 117,
+            "Width": 96,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_small_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_small_button_OFF.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_2",
+            "X": 16,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 15,
+              "Green": 157,
+              "Blue": 88
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_2",
+            "X": 51,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 244,
+              "Green": 180
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_1_2",
+            "X": 86,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 219,
+              "Green": 68,
+              "Blue": 55
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_1_1_1",
+            "X": 121,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 66,
+              "Green": 133,
+              "Blue": 244
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_1_1_2_1",
+            "X": 156,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 209,
+              "Green": 205,
+              "Blue": 218
+            },
+            "Clickable": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 16,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 15,
+              "Green": 157,
+              "Blue": 88
+            },
+            "BorderSize": 2,
+            "Draggable": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1",
+            "X": 51,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 244,
+              "Green": 180
+            },
+            "BorderSize": 2,
+            "Draggable": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1_1",
+            "X": 86,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 219,
+              "Green": 68,
+              "Blue": 55
+            },
+            "BorderSize": 2,
+            "Draggable": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1_1_1",
+            "X": 121,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Color": {
+              "Red": 209,
+              "Green": 205,
+              "Blue": 218
+            },
+            "BorderSize": 2,
+            "Draggable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum2_1",
+            "X": 63,
+            "Y": 94,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_4XEW",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum3_1",
+            "X": 98,
+            "Y": 94,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_SRJZ",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum4_1",
+            "X": 132,
+            "Y": 94,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_PZHG",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum2_1_1",
+            "X": 28,
+            "Y": 94,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_IEJ0",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textNum4_1_1",
+            "X": 132,
+            "Y": 60,
+            "Width": 6,
+            "Height": 13,
+            "TextId": "__SingleUse_QV0O",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2",
+            "X": 6,
+            "Y": 202,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1",
+            "X": 62,
+            "Y": 202,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1",
+            "X": 118,
+            "Y": 202,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1_1",
+            "X": 174,
+            "Y": 202,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1_1_1",
+            "X": 230,
+            "Y": 202,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_2",
+            "X": 6,
+            "Y": 147,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_2",
+            "X": 62,
+            "Y": 147,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1_2",
+            "X": 118,
+            "Y": 147,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1_1_2",
+            "X": 174,
+            "Y": 147,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1_1_1_1",
+            "X": 230,
+            "Y": 147,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton2_1_1_1_1_2",
+            "X": 286,
+            "Y": 174,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnALL",
+            "X": 370,
+            "Y": 174,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTEST",
+            "X": 426,
+            "Y": 174,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_grey.png",
+            "Released": "btn_50x50_blue.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "chooseTemp1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "textTemp1"
+            }
+          },
+          {
+            "InteractionName": "chooseTemp",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "virtChooseTemp"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "Screen2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ScreenTableSettings",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            }
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line22",
+            "X": 376,
+            "Width": 4,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 4,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor1",
+            "Width": 480,
+            "Height": 2,
+            "EndX": 480,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 398,
+            "Y": 22,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 380,
+            "Y": 117,
+            "Width": 30,
+            "Height": 30,
+            "InitialStatePressed": true,
+            "Pressed": "btn_30x30_grey.png",
+            "Released": "btn_30x30_blue.png",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1",
+            "X": 16,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_FCCJ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2",
+            "X": 51,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_YNB5",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3",
+            "X": 86,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_BUEV",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4",
+            "X": 121,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_XK0Z",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5",
+            "X": 156,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_4ES3",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet6",
+            "X": 191,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_AH07",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet7",
+            "X": 226,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_J5VW",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet8",
+            "X": 261,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_9WZ1",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet9",
+            "X": 296,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_BS7D",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet10",
+            "X": 331,
+            "Y": 16,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_T5TS",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1_1",
+            "X": 16,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_2U8E",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2_1",
+            "X": 51,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_U8A5",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3_1",
+            "X": 86,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_WXVT",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4_1",
+            "X": 121,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_D9V8",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5_1",
+            "X": 156,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_MF93",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet6_1",
+            "X": 191,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_1O5P",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet7_1",
+            "X": 226,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_5NUE",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet8_1",
+            "X": 261,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_NWG9",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet9_1",
+            "X": 296,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_V9BP",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet10_1",
+            "X": 331,
+            "Y": 51,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_JVML",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1_2",
+            "X": 16,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_4ZAM",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2_2",
+            "X": 51,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_BGYC",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3_2",
+            "X": 86,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_790O",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4_2",
+            "X": 121,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_6Z0O",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5_2",
+            "X": 156,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_ZSJH",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet6_2",
+            "X": 191,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_O5S9",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet7_2",
+            "X": 226,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_RV7D",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet8_2",
+            "X": 261,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_8GY1",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet9_2",
+            "X": 296,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_2Y9B",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet10_2",
+            "X": 331,
+            "Y": 86,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_OTOZ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1_1_1",
+            "X": 16,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_ZRHO",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2_1_1",
+            "X": 51,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_51D6",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3_1_1",
+            "X": 86,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_IWZ0",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4_1_1",
+            "X": 121,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_LF68",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5_1_1",
+            "X": 156,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_HA4P",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet6_1_1",
+            "X": 191,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_IUE1",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet7_1_1",
+            "X": 226,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_K9VH",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet8_1_1",
+            "X": 261,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_0Y9G",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet9_1_1",
+            "X": 296,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_EUS6",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet10_1_1",
+            "X": 331,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_YDEZ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1_2_1",
+            "X": 16,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_SB4L",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2_2_1",
+            "X": 51,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_Q7PX",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3_2_1",
+            "X": 86,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_1A4N",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4_2_1",
+            "X": 121,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_Y8QE",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5_2_1",
+            "X": 156,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_MQD5",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet6_2_1",
+            "X": 191,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_G5FU",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet7_2_1",
+            "X": 226,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_XSW1",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet8_2_1",
+            "X": 261,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_XAKD",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet9_2_1",
+            "X": 296,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_6F6H",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet10_2_1",
+            "X": 331,
+            "Y": 156,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_03KM",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1_1_1_1",
+            "X": 16,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_T7QZ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2_1_1_1",
+            "X": 51,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_4WSF",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3_1_1_1",
+            "X": 86,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_DNTH",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4_1_1_1",
+            "X": 121,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_AISX",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5_1_1_1",
+            "X": 156,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_5KY7",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet6_1_1_1",
+            "X": 191,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_LYA0",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet7_1_1_1",
+            "X": 226,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_00QS",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet8_1_1_1",
+            "X": 261,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_CJNT",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet9_1_1_1",
+            "X": 296,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_G0LI",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet10_1_1_1",
+            "X": 331,
+            "Y": 191,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_OPZA",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet1_1_1_1_1",
+            "X": 16,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_AQXJ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet2_1_1_1_1",
+            "X": 51,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_QCDY",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet3_1_1_1_1",
+            "X": 86,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_WJLQ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet4_1_1_1_1",
+            "X": 121,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_FMB5",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet5_1_1_1_1",
+            "X": 156,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_7Z9E",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet66",
+            "X": 191,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_F9D4",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet67",
+            "X": 226,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_AABJ",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet68",
+            "X": 261,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_6KIP",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet69",
+            "X": 296,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_UX74",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "btnTempSet70",
+            "X": 331,
+            "Y": 226,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "btn_30x30_blue.png",
+            "Released": "btn_30x30_grey.png",
+            "TextId": "__SingleUse_A0KX",
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Button",
+            "Name": "button2",
+            "X": 380,
+            "Y": 155,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 382,
+            "Y": 86,
+            "Width": 92,
+            "Height": 25,
+            "TextId": "__SingleUse_P7NU",
+            "TextRotation": "0",
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "chooseTemp",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "virtChooseTemp"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (textArea1.isVisible())\r\n{\r\n    \r\n    textArea1.setVisible(false);\r\n    textArea1.invalidate();\r\n}\r\nelse\r\n{\r\n    textArea1.setVisible(true);\r\n    textArea1.invalidate();\r\n}"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ScreenTableSettings_1",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            }
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "Width": 2,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 2,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line22",
+            "X": 376,
+            "Width": 4,
+            "Height": 272,
+            "EndY": 272,
+            "LineWidth": 4,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "gor1",
+            "Width": 480,
+            "Height": 2,
+            "EndX": 480,
+            "LineWidth": 2,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 398,
+            "Y": 22,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 440,
+            "Y": 121,
+            "Width": 30,
+            "Height": 30,
+            "InitialStatePressed": true,
+            "Pressed": "btn_30x30_grey.png",
+            "Released": "btn_30x30_blue.png",
+            "Clickable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "button2",
+            "X": 380,
+            "Y": 155,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Style": "Style1"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 382,
+            "Y": 86,
+            "Width": 92,
+            "Height": 25,
+            "TextId": "__SingleUse_0FNE",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "Width": 378,
+            "Height": 272,
+            "Visible": false,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "container2",
+                "Width": 376,
+                "Height": 272,
+                "Components": [
+                  {
+                    "Type": "Container",
+                    "Name": "container1_6",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": [
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect1_6",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect2_6",
+                        "X": 86,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect3_6",
+                        "X": 156,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect4_6",
+                        "X": 226,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect5_6",
+                        "X": 296,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect6_6",
+                        "X": 10,
+                        "Y": 86,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textArea2_6",
+                        "X": 86,
+                        "Y": 28,
+                        "Width": 60,
+                        "Height": 25,
+                        "TextId": "__SingleUse_K1R1",
+                        "TextRotation": "0"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "container1_5",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": [
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect1_5",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect2_5",
+                        "X": 86,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect3_5",
+                        "X": 156,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect4_5",
+                        "X": 226,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect5_5",
+                        "X": 296,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect6_5",
+                        "X": 10,
+                        "Y": 86,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textArea2_5",
+                        "X": 86,
+                        "Y": 28,
+                        "Width": 60,
+                        "Height": 25,
+                        "TextId": "__SingleUse_RQFU",
+                        "TextRotation": "0"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "container1_4",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": [
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect1_4",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect2_4",
+                        "X": 86,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect3_4",
+                        "X": 156,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect4_4",
+                        "X": 226,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect5_4",
+                        "X": 296,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect6_4",
+                        "X": 10,
+                        "Y": 86,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textArea2_4",
+                        "X": 86,
+                        "Y": 28,
+                        "Width": 60,
+                        "Height": 25,
+                        "TextId": "__SingleUse_ZU78",
+                        "TextRotation": "0"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "container1_3",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": [
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect1_3",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect2_3",
+                        "X": 86,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect3_3",
+                        "X": 156,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect4_3",
+                        "X": 226,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect5_3",
+                        "X": 296,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect6_3",
+                        "X": 10,
+                        "Y": 86,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textArea2_3",
+                        "X": 86,
+                        "Y": 28,
+                        "Width": 60,
+                        "Height": 25,
+                        "TextId": "__SingleUse_D8IW",
+                        "TextRotation": "0"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "container1_2",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": [
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect1_2",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect2_2",
+                        "X": 86,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect3_2",
+                        "X": 156,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect4_2",
+                        "X": 226,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect5_2",
+                        "X": 296,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect6_2",
+                        "X": 10,
+                        "Y": 86,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textArea2_2",
+                        "X": 86,
+                        "Y": 28,
+                        "Width": 60,
+                        "Height": 25,
+                        "TextId": "__SingleUse_OW12",
+                        "TextRotation": "0"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "container1_1",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": [
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect1_1",
+                        "X": 10,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect2_1",
+                        "X": 86,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect3_1",
+                        "X": 156,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect4_1",
+                        "X": 226,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect5_1",
+                        "X": 296,
+                        "Y": 10,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "ToggleButton",
+                        "Name": "btnTempSelect6_1",
+                        "X": 10,
+                        "Y": 86,
+                        "Width": 60,
+                        "Height": 60,
+                        "Pressed": "btn_60x60_blue.png",
+                        "Released": "btn_60x60_grey.png"
+                      },
+                      {
+                        "Type": "TextArea",
+                        "Name": "textArea2_1",
+                        "X": 86,
+                        "Y": 28,
+                        "Width": 60,
+                        "Height": 25,
+                        "TextId": "__SingleUse_8LTS",
+                        "TextRotation": "0"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Container",
+                    "Name": "container1",
+                    "X": 2,
+                    "Y": 58,
+                    "Width": 374,
+                    "Height": 156,
+                    "Components": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer1",
+            "Width": 378,
+            "Height": 272,
+            "SwipeCutoff": 50,
+            "IndicatorImageNormal": "__designer\\Blue_PageIndicator_dot_indicator_small_normal.png",
+            "IndicatorImageHighlight": "__designer\\Blue_PageIndicator_dot_indicator_small_highlight.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainer1Page1_1",
+            "Style": "Style1",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page1",
+                "Width": 378,
+                "Height": 272,
+                "Components": [
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect1",
+                    "X": 12,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect2",
+                    "X": 88,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect3",
+                    "X": 158,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect4",
+                    "X": 228,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect5",
+                    "X": 298,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect6",
+                    "X": 12,
+                    "Y": 144,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea2",
+                    "X": 88,
+                    "Y": 86,
+                    "Width": 60,
+                    "Height": 25,
+                    "TextId": "__SingleUse_M90T",
+                    "TextRotation": "0"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "image1_1",
+                    "X": 164,
+                    "Y": 8,
+                    "Width": 48,
+                    "Height": 28,
+                    "RelativeFilename": "__designer\\Dark_Icons_Up_arrow_48.png"
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page1_1",
+                "Width": 378,
+                "Height": 272,
+                "Components": [
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect1_7",
+                    "X": 12,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect2_7",
+                    "X": 88,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect3_7",
+                    "X": 158,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect4_7",
+                    "X": 228,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect5_7",
+                    "X": 298,
+                    "Y": 68,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "ToggleButton",
+                    "Name": "btnTempSelect6_7",
+                    "X": 12,
+                    "Y": 144,
+                    "Width": 60,
+                    "Height": 60,
+                    "Pressed": "btn_60x60_blue.png",
+                    "Released": "btn_60x60_grey.png"
+                  },
+                  {
+                    "Type": "TextArea",
+                    "Name": "textArea2_7",
+                    "X": 88,
+                    "Y": 86,
+                    "Width": 60,
+                    "Height": 25,
+                    "TextId": "__SingleUse_8HRC",
+                    "TextRotation": "0"
+                  },
+                  {
+                    "Type": "Image",
+                    "Name": "image1_2",
+                    "X": 164,
+                    "Y": 235,
+                    "Width": 48,
+                    "Height": 28,
+                    "RelativeFilename": "__designer\\Dark_Icons_Down_arrow_48.png"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "chooseTemp",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "virtChooseTemp"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton1"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (textArea1.isVisible())\r\n{\r\n    \r\n    textArea1.setVisible(false);\r\n    textArea1.invalidate();\r\n}\r\nelse\r\n{\r\n    textArea1.setVisible(true);\r\n    textArea1.invalidate();\r\n}"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "action1"
+          }
+        ]
+      },
+      {
+        "Name": "Screen2",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            }
+          },
+          {
+            "Type": "ScrollList",
+            "Name": "scrollList1",
+            "Width": 370,
+            "Height": 1092,
+            "ItemTemplateName": "CustomContainer0",
+            "NumberofItems": 7,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelectALL",
+            "X": 420,
+            "Y": 40,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "btn_60x60_blue.png",
+            "Released": "btn_60x60_grey.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 421,
+            "Y": 106,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "btn_60x60_grey.png",
+            "Released": "btn_60x60_blue.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 368,
+            "Y": 10,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_1EXX",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_685X",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 368,
+            "Y": 38,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_VCHA",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_0YAO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3",
+            "X": 368,
+            "Y": 66,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_GWSL",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_FE49",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea4",
+            "X": 368,
+            "Y": 94,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_2U58",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_FK22",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea5",
+            "X": 368,
+            "Y": 124,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_QWWW",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_JCWT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea6",
+            "X": 368,
+            "Y": 156,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_2FBF",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_14C4",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea7",
+            "X": 368,
+            "Y": 179,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_VJX3",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_RG9A",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea8",
+            "X": 368,
+            "Y": 228,
+            "Width": 108,
+            "Height": 25,
+            "TextId": "__SingleUse_YOYL",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_DWGX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelectALL"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "for (int i = 0; i < 7; i++)\r\n{\r\n    scrollList1ListItems[i].setListElementsCheck(i, btnTempSelectALL.getState());\r\n}\r\n"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "checkALL"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen3",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 426,
+            "Y": 179,
+            "Width": 25,
+            "Height": 25,
+            "TextId": "__SingleUse_YS5J",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelectALL",
+            "X": 420,
+            "Y": 40,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "btn_60x60_blue.png",
+            "Released": "btn_60x60_grey.png"
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "Width": 420,
+            "Height": 272,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customCont1",
+                "Width": 370,
+                "Height": 148,
+                "CustomContainerDefinitionName": "CustomContainer0"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "customCont2",
+                "Width": 370,
+                "Height": 148,
+                "CustomContainerDefinitionName": "CustomContainer0"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelectALL"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "for (int i = 0; i < 7; i++)\r\n{\r\n}\r\n"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "CustomContainer2",
+        "Width": 250,
+        "Height": 80,
+        "Components": [
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 95,
+            "Y": 10,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "btn_60x60_blue.png",
+            "Released": "btn_60x60_grey.png"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "CustomContainer0",
+        "Width": 370,
+        "Height": 148,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 370,
+            "Height": 150,
+            "Color": {
+              "Red": 135,
+              "Green": 135,
+              "Blue": 135
+            }
+          },
+          {
+            "Type": "Line",
+            "Name": "linEND",
+            "X": 30,
+            "Y": 146,
+            "Width": 300,
+            "Height": 5,
+            "StartY": 3,
+            "EndX": 300,
+            "EndY": 3,
+            "LineWidth": 5,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "linSTART",
+            "X": 30,
+            "Y": -2,
+            "Width": 300,
+            "Height": 5,
+            "StartY": 3,
+            "EndX": 300,
+            "EndY": 3,
+            "LineWidth": 5,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont1",
+            "X": 8,
+            "Y": 14,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont2",
+            "X": 68,
+            "Y": 14,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont3",
+            "X": 128,
+            "Y": 14,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont4",
+            "X": 188,
+            "Y": 14,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont5",
+            "X": 248,
+            "Y": 14,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont6",
+            "X": 8,
+            "Y": 82,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont7",
+            "X": 68,
+            "Y": 82,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont8",
+            "X": 128,
+            "Y": 82,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont9",
+            "X": 188,
+            "Y": 82,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelCont10",
+            "X": 248,
+            "Y": 82,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "btnTempSelContALL",
+            "X": 308,
+            "Y": 48,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_50x50_blue.png",
+            "Released": "btn_50x50_grey.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1X",
+            "X": 8,
+            "Y": 26,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_554W",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_K6OT",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2X",
+            "X": 68,
+            "Y": 26,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_PAEK",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8H2Z",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3X",
+            "X": 128,
+            "Y": 26,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_J066",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_LPDJ",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea4X",
+            "X": 188,
+            "Y": 26,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_8Q5L",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_5GNC",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea5X",
+            "X": 248,
+            "Y": 26,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_YGTE",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_A03K",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea6X",
+            "X": 8,
+            "Y": 94,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_RVGA",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_WGMM",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea7X",
+            "X": 68,
+            "Y": 94,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_4UAR",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_29CQ",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea8X",
+            "X": 128,
+            "Y": 94,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_1VX3",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ADYJ",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea9X",
+            "X": 188,
+            "Y": 94,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_WCV2",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_XXZS",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea10X",
+            "X": 248,
+            "Y": 94,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_7VOZ",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_ICW2",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textAreaLX",
+            "X": 308,
+            "Y": 62,
+            "Width": 50,
+            "Height": 25,
+            "TextId": "__SingleUse_ETQK",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_G6KZ",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelContALL"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "btnTempSelCont1.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont1.invalidate();\r\nbtnTempSelCont2.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont2.invalidate();\r\nbtnTempSelCont3.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont3.invalidate();\r\nbtnTempSelCont4.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont4.invalidate();\r\nbtnTempSelCont5.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont5.invalidate();\r\nbtnTempSelCont6.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont6.invalidate();\r\nbtnTempSelCont7.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont7.invalidate();\r\nbtnTempSelCont8.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont8.invalidate();\r\nbtnTempSelCont9.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont9.invalidate();\r\nbtnTempSelCont10.forceState(btnTempSelContALL.getState());\r\nbtnTempSelCont10.invalidate();\r\n\r\nif (btnTempSelContALL.getState())\r\n{\r\n    textAreaLX.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\t\r\n    textArea1X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea2X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea3X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea4X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea5X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea6X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea7X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea8X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea9X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n    textArea10X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textAreaLX.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea1X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea2X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea3X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea4X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea5X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea6X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea7X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea8X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea9X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n    textArea10X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea1X.invalidate();\r\ntextArea2X.invalidate();\r\ntextArea3X.invalidate();\r\ntextArea4X.invalidate();\r\ntextArea5X.invalidate();\r\ntextArea6X.invalidate();\r\ntextArea7X.invalidate();\r\ntextArea8X.invalidate();\r\ntextArea9X.invalidate();\r\ntextArea10X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont1"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont1.getState())\r\n{\r\n    textArea1X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea1X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea1X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont2"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont2.getState())\r\n{\r\n    textArea2X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea2X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea2X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont3"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont3.getState())\r\n{\r\n    textArea3X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea3X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea3X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont4"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont4.getState())\r\n{\r\n    textArea4X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea4X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea4X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont5"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont5.getState())\r\n{\r\n    textArea5X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea5X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea5X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn6",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont6"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont6.getState())\r\n{\r\n    textArea6X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea6X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea6X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn7",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont7"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont7.getState())\r\n{\r\n    textArea7X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea7X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea7X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn8",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont8"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont8.getState())\r\n{\r\n    textArea8X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea8X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea8X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn9",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont9"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont9.getState())\r\n{\r\n    textArea9X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea9X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea9X.invalidate();"
+            }
+          },
+          {
+            "InteractionName": "btn10",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnTempSelCont10"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Code": "if (btnTempSelCont10.getState())\r\n{\r\n    textArea10X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));\r\n}\r\nelse\r\n{\r\n    textArea10X.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));\r\n}\r\ntextArea10X.invalidate();"
+            }
+          }
+        ]
+      }
+    ],
+    "Name": "MyProject",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      24
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD24bpp": {
+        "Id": "LCD24bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../MyProject.ioc --platform=m7",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7"
+  },
+  "Version": "4.18.1"
+}
