@@ -53,6 +53,8 @@ void CustomContainer0::setListElementsCheck(int item, bool check)
 	btnTempSelCont9.invalidate();
 	btnTempSelCont10.forceState(check);
 	btnTempSelCont10.invalidate();
+	btnTempSelContALL.forceState(check);
+	btnTempSelContALL.invalidate();
 
 	if (check)
 	{
@@ -96,6 +98,7 @@ void CustomContainer0::setListElementsCheck(int item, bool check)
 	        textArea10X.invalidate();
 	        textAreaLX.invalidate();
 }
+
 void CustomContainer0::setListElements(int item)
 {
 	Unicode::snprintf(textArea1XBuffer, TEXTAREA1X_SIZE, "%d", 1 + item*10);
