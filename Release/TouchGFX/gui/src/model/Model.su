@@ -1,0 +1,3 @@
+Model.cpp:9:1:Model::Model()	0	static
+Model.cpp:14:6:void Model::tick()	0	static
+Model.cpp:27:6:void Model::toggleHwLed()	0	static
