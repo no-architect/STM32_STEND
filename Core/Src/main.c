@@ -78,6 +78,7 @@ SPI_HandleTypeDef hspi5;
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim8;
 
 SDRAM_HandleTypeDef hsdram1;
 
@@ -106,6 +107,7 @@ MCP23x17_t MCP23S17_7;	//---Opcode = 0b111;
 //}
 static FMC_SDRAM_CommandTypeDef Command;
 int counter;
+int pos = 0;
 volatile char sim;
 /* USER CODE END PV */
 
@@ -121,8 +123,8 @@ static void MX_LTDC_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_SPI5_Init(void);
 static void MX_SPI2_Init(void);
-static void MX_TIM2_Init(void);
 static void MX_TIM1_Init(void);
+static void MX_TIM8_Init(void);
 void StartDefaultTask(void const * argument);
 void StartTask02(void const * argument);
 
@@ -236,8 +238,8 @@ int main(void)
   MX_I2C3_Init();
   MX_SPI5_Init();
   MX_SPI2_Init();
-  MX_TIM2_Init();
   MX_TIM1_Init();
+  MX_TIM8_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 
@@ -257,6 +259,7 @@ int main(void)
    };
 
 */
+/*
   MCP23S17_CIP0059_MOTOR.com.protocole = MCP23S17_SPI;
   MCP23S17_CIP0059_MOTOR.com.hspix = hspi2;
 
@@ -270,7 +273,8 @@ int main(void)
   MCP23S17_CIP0059_MOTOR.config.portB.default_GPIO = 0xFF;
   MCP23S17_CIP0059_MOTOR.config.portA.OLAT = 0xFF;
   MCP23S17_CIP0059_MOTOR.config.portB.OLAT = 0xFF;
-
+*/
+  /*
   //---setting MCP23S17`s commutation
   MCP23S17_0.com.protocole = MCP23S17_SPI; MCP23S17_0.com.hspix = hspi2; MCP23S17_0.com.Opcode = 0b000;
   MCP23S17_1.com.protocole = MCP23S17_SPI; MCP23S17_1.com.hspix = hspi2; MCP23S17_1.com.Opcode = 0b001;
@@ -280,7 +284,7 @@ int main(void)
   MCP23S17_5.com.protocole = MCP23S17_SPI; MCP23S17_5.com.hspix = hspi2; MCP23S17_5.com.Opcode = 0b101;
   MCP23S17_6.com.protocole = MCP23S17_SPI; MCP23S17_6.com.hspix = hspi2; MCP23S17_6.com.Opcode = 0b110;
   MCP23S17_7.com.protocole = MCP23S17_SPI; MCP23S17_7.com.hspix = hspi2; MCP23S17_7.com.Opcode = 0b111;
-
+*/
   int kol;
   for (kol=0;kol<8;kol++)
   {
@@ -295,9 +299,20 @@ int main(void)
 	  MCP23S17[kol].config.portB.OLAT = 0xFF;				//---(default = 0x00) output latch register
 	  MCP23x17_init(&MCP23S17[kol]);						//---initialize MCP
   }
+  MCP23x17_write(&MCP23S17[7], MCP23x17_portB, MCP23x17_OLAT, 0x7F);	//--- disable LED2
+  MCP23x17_write(&MCP23S17[0], MCP23x17_portA, MCP23x17_OLAT, 0xFE);	//--- disable LED1
+  //---setting MCP23S17`s commutation
+    //MCP23S17_0.com.protocole = MCP23S17_SPI; MCP23S17_0.com.hspix = hspi2; MCP23S17_0.com.Opcode = 0b000; MCP23S17_0.config.portA.IOCON = 0x28; MCP23S17_0.config.portA.IODIR = 0x00; MCP23S17_0.config.portA.OLAT = 0x00; MCP23S17_0.config.portB.IOCON = 0x28; MCP23S17_0.config.portB.IODIR = 0x00; MCP23S17_0.config.portB.OLAT = 0xFF;
+    //MCP23S17_1.com.protocole = MCP23S17_SPI; MCP23S17_1.com.hspix = hspi2; MCP23S17_1.com.Opcode = 0b001;
+    //MCP23S17_2.com.protocole = MCP23S17_SPI; MCP23S17_2.com.hspix = hspi2; MCP23S17_2.com.Opcode = 0b010;
+    //MCP23S17_3.com.protocole = MCP23S17_SPI; MCP23S17_3.com.hspix = hspi2; MCP23S17_3.com.Opcode = 0b011;
+    //MCP23S17_4.com.protocole = MCP23S17_SPI; MCP23S17_4.com.hspix = hspi2; MCP23S17_4.com.Opcode = 0b100;
+    //MCP23S17_5.com.protocole = MCP23S17_SPI; MCP23S17_5.com.hspix = hspi2; MCP23S17_5.com.Opcode = 0b101;
+    //MCP23S17_6.com.protocole = MCP23S17_SPI; MCP23S17_6.com.hspix = hspi2; MCP23S17_6.com.Opcode = 0b110;
+    //MCP23S17_7.com.protocole = MCP23S17_SPI; MCP23S17_7.com.hspix = hspi2; MCP23S17_7.com.Opcode = 0b111; MCP23S17_7.config.portA.IOCON = 0x28; MCP23S17_7.config.portA.IODIR = 0x00; MCP23S17_7.config.portA.OLAT = 0xFF; MCP23S17_7.config.portB.IOCON = 0x28; MCP23S17_7.config.portB.IODIR = 0x00; MCP23S17_7.config.portB.OLAT = 0x00;
+    //MCP23x17_init(&MCP23S17_0);
+    //MCP23x17_init(&MCP23S17_7);
 
-  MCP23S17[0].config.portA.OLAT = 0xFE;						//--- disable LED1
-  MCP23S17[7].config.portB.OLAT = 0x7F;						//--- disable LED2
 /*
   //---setting MCP23S17_0 portA and portB configuration
   MCP23S17_0.config.portA.IOCON = 0x28;				//---(default = 0x00) GPA0-GPA7 interrupt on change control register
@@ -319,8 +334,9 @@ int main(void)
 
   HAL_Delay(100);
 
-  Max31865_init_index(&pt100, &hspi5, SENSOR_CS1_GPIO_Port, SENSOR_CS1_Pin, 2, 50, 1);
-
+  Max31865_init_index(&pt100, &hspi5, SENSOR_CS1_GPIO_Port, SENSOR_CS1_Pin, 2, 50, 0);
+  MCP23x17_write(&MCP23S17[7], MCP23x17_portB, MCP23x17_OLAT, 0x7F);	//--- disable LED2
+  MCP23x17_write(&MCP23S17[0], MCP23x17_portA, MCP23x17_OLAT, 0xFE);	//--- disable LED1
 /**
   // Define SPI pinout
   max_gpio.MISO_PIN = GPIO_PIN_8;
@@ -335,8 +351,8 @@ int main(void)
   MAX31865_init(&max_gpio, 2);
 **/
 
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
 
   /* USER CODE END 2 */
 
@@ -741,7 +757,6 @@ static void MX_TIM1_Init(void)
   /* USER CODE END TIM1_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-  TIM_SlaveConfigTypeDef sSlaveConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
@@ -752,7 +767,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 199;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 31;
+  htim1.Init.Period = 31999;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
@@ -769,21 +784,15 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  sSlaveConfig.SlaveMode = TIM_SLAVEMODE_GATED;
-  sSlaveConfig.InputTrigger = TIM_TS_ITR1;
-  if (HAL_TIM_SlaveConfigSynchro(&htim1, &sSlaveConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_OC1REF;
   sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_ENABLE;
   if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 16;
+  sConfigOC.Pulse = 16000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
@@ -816,61 +825,88 @@ static void MX_TIM1_Init(void)
 }
 
 /**
-  * @brief TIM2 Initialization Function
+  * @brief TIM8 Initialization Function
   * @param None
   * @retval None
   */
-static void MX_TIM2_Init(void)
+static void MX_TIM8_Init(void)
 {
 
-  /* USER CODE BEGIN TIM2_Init 0 */
+  /* USER CODE BEGIN TIM8_Init 0 */
 
-  /* USER CODE END TIM2_Init 0 */
+  /* USER CODE END TIM8_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_SlaveConfigTypeDef sSlaveConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
+  TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
 
-  /* USER CODE BEGIN TIM2_Init 1 */
+  /* USER CODE BEGIN TIM8_Init 1 */
 
-  /* USER CODE END TIM2_Init 1 */
-  htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 199;
-  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 31999;
-  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
-  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  /* USER CODE END TIM8_Init 1 */
+  htim8.Instance = TIM8;
+  htim8.Init.Prescaler = 199;
+  htim8.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim8.Init.Period = 31;
+  htim8.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim8.Init.RepetitionCounter = 0;
+  htim8.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim8) != HAL_OK)
   {
     Error_Handler();
   }
   sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  if (HAL_TIM_ConfigClockSource(&htim8, &sClockSourceConfig) != HAL_OK)
   {
     Error_Handler();
   }
-  if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+  if (HAL_TIM_PWM_Init(&htim8) != HAL_OK)
   {
     Error_Handler();
   }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_OC1REF;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  sSlaveConfig.SlaveMode = TIM_SLAVEMODE_GATED;
+  sSlaveConfig.InputTrigger = TIM_TS_ITR0;
+  if (HAL_TIM_SlaveConfigSynchro(&htim8, &sSlaveConfig) != HAL_OK)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 16000;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_ENABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim8, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN TIM2_Init 2 */
+  sConfigOC.OCMode = TIM_OCMODE_PWM2;
+  sConfigOC.Pulse = 16;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_LOW;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim8, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
+  sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
+  sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
+  sBreakDeadTimeConfig.DeadTime = 0;
+  sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
+  sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
+  sBreakDeadTimeConfig.BreakFilter = 0;
+  sBreakDeadTimeConfig.Break2State = TIM_BREAK2_DISABLE;
+  sBreakDeadTimeConfig.Break2Polarity = TIM_BREAK2POLARITY_HIGH;
+  sBreakDeadTimeConfig.Break2Filter = 0;
+  sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
+  if (HAL_TIMEx_ConfigBreakDeadTime(&htim8, &sBreakDeadTimeConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM8_Init 2 */
 
-  /* USER CODE END TIM2_Init 2 */
-  HAL_TIM_MspPostInit(&htim2);
+  /* USER CODE END TIM8_Init 2 */
+  HAL_TIM_MspPostInit(&htim8);
 
 }
 
@@ -1218,25 +1254,24 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-void TOGGLE_LED3(int setPWM)
+void SET_TIM1_PWM_PULSE(int setPWM)
 {
-/*	HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
-	int read = HAL_TIM_ReadCapturedValue(&htim2, TIM_CHANNEL_1);
-	int proba = __HAL_TIM_GET_COUNTER(&htim2);
 
-	if ((setPWM < 99) && (setPWM > 0))
+	HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Stop(&htim8, TIM_CHANNEL_4);
+	int read = HAL_TIM_ReadCapturedValue(&htim1, TIM_CHANNEL_1);
+	int proba = __HAL_TIM_GET_COUNTER(&htim1);
+
+	if ((setPWM < 100) && (setPWM > 0))
 	{
-		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 16 * setPWM);
-		HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 320 * setPWM);
+		HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+		HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_4);
 	}
-	else
-	{
-		//HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
-	}
+
 
 	//HAL_StatusTypeDef status;
 	//char name[32];
-*/
 
 
 	//status = HAL_UART_ReceiveString(&huart6, (uint8_t*)name, sizeof(name) - 1, HAL_MAX_DELAY);
@@ -1257,7 +1292,11 @@ float TEMP_SENSOR_GetValue(void)
 {
 	float t;
 	uint32_t pro;
-	pt100isOK = Max31865_readTempC_index(&pt100,&t, 1);
+	pt100isOK = Max31865_readTempC_index(&pt100,&t, 0);
+
+	MCP23x17_write(&MCP23S17[7], MCP23x17_portB, MCP23x17_OLAT, 0x7F);	//--- disable LED2
+	MCP23x17_write(&MCP23S17[0], MCP23x17_portA, MCP23x17_OLAT, 0xFE);	//--- disable LED1
+
 	//		 Max31865_readTempC(&pt100,&t);
 	//pt100Temp = MAX31865_readTemp();;   //  << For Smoothing data
 	pt100Temp = t; //Max31865_Filter(t, pt100Temp, 0.1);
@@ -1277,8 +1316,8 @@ float TEMP_SENSOR_INDEX_GetValue(int index)
 	{
 		pt100isOK = Max31865_readTempC_index(&pt100, &t, index);
 
-		MCP23x17_write_index(MCP23x17_portA, MCP23x17_OLAT, 0x00, 0x00, MCP_TEMP);		//--- disable LED1
-		MCP23x17_write_index(MCP23x17_portB, MCP23x17_OLAT, 0x00, 0x07, MCP_TEMP);		//--- disable LED2
+		  MCP23x17_write(&MCP23S17[7], MCP23x17_portB, MCP23x17_OLAT, 0x7F);	//--- disable LED2
+		  MCP23x17_write(&MCP23S17[0], MCP23x17_portA, MCP23x17_OLAT, 0xFE);	//--- disable LED1
 
 		//		 Max31865_readTempC(&pt100,&t);
 		//pt100Temp = MAX31865_readTemp();;   //  << For Smoothing data

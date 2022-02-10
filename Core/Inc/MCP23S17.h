@@ -152,8 +152,11 @@ typedef struct MCP_CSforMAX_s {
 	uint8_t OLAT;
 } MCP_CSforMAX_t;
 
-static const int8_t MAX_COUNT = 2;
-static const MCP_CSforMAX_t MAX[2] = {{ ADD_0, MCP23x17_portB, BIT_2}, { ADD_7, MCP23x17_portA, BIT_5}};
+static const int8_t MAX_COUNT = 10;
+static const MCP_CSforMAX_t MAX[10] = {{ ADD_0, MCP23x17_portB, BIT_2}, { ADD_0, MCP23x17_portA, BIT_1}, { ADD_0, MCP23x17_portA, BIT_2},
+										{ ADD_0, MCP23x17_portA, BIT_3}, { ADD_0, MCP23x17_portA, BIT_4}, { ADD_0, MCP23x17_portA, BIT_5},
+										{ ADD_0, MCP23x17_portA, BIT_6}, { ADD_0, MCP23x17_portA, BIT_7}, { ADD_0, MCP23x17_portB, BIT_0},
+										{ ADD_0, MCP23x17_portB, BIT_1}};
 
 uint8_t MCP23x17_init(MCP23x17_t *driver);
 uint8_t MCP23x17_read(MCP23x17_t *driver, MCP23x17_port_t port, MCP23x17_register_t reg);

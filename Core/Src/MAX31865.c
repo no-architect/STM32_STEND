@@ -426,7 +426,7 @@ void  Max31865_init_index(Max31865_t *max31865, SPI_HandleTypeDef *spi, GPIO_Typ
   int i;
   i = MAX[0].indexMCP;
 
-  MCP23x17_write_index(MAX[index].portX, MCP23x17_OLAT, 0xFF, MAX[index].indexMCP, MCP_TEMP);
+  MCP23x17_write_index(MAX[index].portX, MCP23x17_OLAT, MAX[index].OLAT, MAX[index].indexMCP, MCP_TEMP);
 
   Max31865_delay(100);
 
