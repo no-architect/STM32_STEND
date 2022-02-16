@@ -152,11 +152,32 @@ typedef struct MCP_CSforMAX_s {
 	uint8_t OLAT;
 } MCP_CSforMAX_t;
 
-static const int8_t MAX_COUNT = 10;
-static const MCP_CSforMAX_t MAX[10] = {{ ADD_0, MCP23x17_portB, BIT_2}, { ADD_0, MCP23x17_portA, BIT_1}, { ADD_0, MCP23x17_portA, BIT_2},
-										{ ADD_0, MCP23x17_portA, BIT_3}, { ADD_0, MCP23x17_portA, BIT_4}, { ADD_0, MCP23x17_portA, BIT_5},
-										{ ADD_0, MCP23x17_portA, BIT_6}, { ADD_0, MCP23x17_portA, BIT_7}, { ADD_0, MCP23x17_portB, BIT_0},
-										{ ADD_0, MCP23x17_portB, BIT_1}};
+static const int8_t MAX_COUNT = 70;
+static const MCP_CSforMAX_t MAX[70] = { { ADD_0, MCP23x17_portB, BIT_2}, { ADD_0, MCP23x17_portA, BIT_1}, { ADD_0, MCP23x17_portA, BIT_2}, //1-3
+								  	  /*4*/ { ADD_0, MCP23x17_portA, BIT_3}, { ADD_0, MCP23x17_portA, BIT_4}, { ADD_0, MCP23x17_portA, BIT_5}, //4-6
+									  /*7*/ { ADD_0, MCP23x17_portA, BIT_6},   /*8*/ { ADD_0, MCP23x17_portA, BIT_7}, { ADD_0, MCP23x17_portB, BIT_0}, //9
+									 /*10*/ { ADD_0, MCP23x17_portB, BIT_1},  /*11*/ { ADD_0, MCP23x17_portA, BIT_1},  /*12*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*13*/ { ADD_0, MCP23x17_portA, BIT_3},  /*14*/ { ADD_0, MCP23x17_portA, BIT_4},  /*15*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*16*/ { ADD_0, MCP23x17_portA, BIT_6},  /*17*/ { ADD_0, MCP23x17_portA, BIT_7},  /*18*/ { ADD_0, MCP23x17_portB, BIT_0},
+									 /*19*/ { ADD_0, MCP23x17_portB, BIT_2},  /*20*/ { ADD_0, MCP23x17_portA, BIT_1},  /*21*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*22*/ { ADD_0, MCP23x17_portA, BIT_3},  /*23*/ { ADD_0, MCP23x17_portA, BIT_4},  /*24*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*25*/ { ADD_0, MCP23x17_portA, BIT_6},  /*26*/ { ADD_0, MCP23x17_portA, BIT_7},  /*27*/ { ADD_0, MCP23x17_portB, BIT_0},
+									 /*28*/	{ ADD_0, MCP23x17_portB, BIT_1},  /*29*/ { ADD_0, MCP23x17_portA, BIT_1},  /*30*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*31*/	{ ADD_0, MCP23x17_portA, BIT_3},  /*32*/ { ADD_0, MCP23x17_portA, BIT_4},  /*33*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*34*/	{ ADD_0, MCP23x17_portA, BIT_6},  /*35*/ { ADD_0, MCP23x17_portA, BIT_7},  /*36*/ { ADD_0, MCP23x17_portB, BIT_0},
+									 /*37*/	{ ADD_0, MCP23x17_portB, BIT_2},  /*38*/ { ADD_0, MCP23x17_portA, BIT_1},  /*39*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*40*/	{ ADD_0, MCP23x17_portA, BIT_3},  /*41*/ { ADD_0, MCP23x17_portA, BIT_4},  /*42*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*43*/	{ ADD_0, MCP23x17_portA, BIT_6},  /*44*/ { ADD_0, MCP23x17_portA, BIT_7},  /*45*/ { ADD_0, MCP23x17_portB, BIT_0},
+									 /*46*/	{ ADD_0, MCP23x17_portB, BIT_1},  /*47*/ { ADD_0, MCP23x17_portA, BIT_1},  /*48*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*49*/	{ ADD_0, MCP23x17_portA, BIT_3},  /*50*/ { ADD_0, MCP23x17_portA, BIT_4},  /*51*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*52*/	{ ADD_0, MCP23x17_portA, BIT_6},  /*53*/ { ADD_0, MCP23x17_portA, BIT_7},  /*54*/ { ADD_0, MCP23x17_portB, BIT_0},
+									 /*55*/	{ ADD_0, MCP23x17_portB, BIT_2},  /*56*/ { ADD_0, MCP23x17_portA, BIT_1},  /*57*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*58*/	{ ADD_0, MCP23x17_portA, BIT_3},  /*59*/ { ADD_0, MCP23x17_portA, BIT_4},  /*60*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*61*/	{ ADD_0, MCP23x17_portA, BIT_6},  /*62*/ { ADD_0, MCP23x17_portA, BIT_7},  /*63*/ { ADD_0, MCP23x17_portB, BIT_0},
+									 /*64*/	{ ADD_0, MCP23x17_portB, BIT_1},  /*65*/ { ADD_0, MCP23x17_portA, BIT_1},  /*66*/ { ADD_0, MCP23x17_portA, BIT_2},
+									 /*67*/	{ ADD_0, MCP23x17_portA, BIT_3},  /*68*/ { ADD_0, MCP23x17_portA, BIT_4},  /*69*/ { ADD_0, MCP23x17_portA, BIT_5},
+									 /*70*/	{ ADD_0, MCP23x17_portA, BIT_6} };
+
 
 uint8_t MCP23x17_init(MCP23x17_t *driver);
 uint8_t MCP23x17_read(MCP23x17_t *driver, MCP23x17_port_t port, MCP23x17_register_t reg);
