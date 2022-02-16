@@ -2,11 +2,12 @@
 #include <gui/model/ModelListener.hpp>
 
 extern "C" {
-	extern void TOGGLE_LED3(int setPWM);
+	extern void SET_TIM1_PWM_PULSE(int setPWM);
 	extern uint32_t userButtonPressed;
 	extern float TEMP_SENSOR_GetValue(void);
 	extern float TEMP_SENSOR_INDEX_GetValue(int valval);
 }
+int prom;
 
 Model::Model() : modelListener(0), counter(), indexTemp(0), indexTempValue(0)
 {
@@ -16,10 +17,17 @@ Model::Model() : modelListener(0), counter(), indexTemp(0), indexTempValue(0)
 void Model::tick()
 {
 	tickCounter++;
+	if (prom != counter)
+	{
+		prom = counter;
+		SET_TIM1_PWM_PULSE(counter);
+	}
+
 	if(tickCounter%5000)
 	{
 		tickCounter = 0;
-		TOGGLE_LED3(counter);
+
+
 		//indexTempValue = getTempIndexValue(indexTemp);
 		//modelListener->newJunctionTempValue(getTempValue());
 		//if (modelListener != 0)
@@ -47,7 +55,7 @@ void Model::toggleHwLed()
 {
 #ifdef SIMULATOR
 	//userButtonPressed = 1;
-	TOGGLE_LED3(counter);
+	SET_TIM1_PWM_PULSE(counter);
 #endif
 }
 

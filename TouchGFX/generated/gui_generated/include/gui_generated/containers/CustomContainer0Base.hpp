@@ -43,6 +43,7 @@ protected:
     touchgfx::ToggleButton btnTempSelCont9;
     touchgfx::ToggleButton btnTempSelCont10;
     touchgfx::ToggleButton btnTempSelContALL;
+    //touchgfx::ToggleButton btnArray[10] = {btnTempSelCont1, btnTempSelCont2, btnTempSelCont3, btnTempSelCont4, btnTempSelCont5, btnTempSelCont6, btnTempSelCont7, btnTempSelCont8, btnTempSelCont9, btnTempSelCont10};
     touchgfx::TextAreaWithOneWildcard textArea1X;
     touchgfx::TextAreaWithOneWildcard textArea2X;
     touchgfx::TextAreaWithOneWildcard textArea3X;
@@ -54,33 +55,35 @@ protected:
     touchgfx::TextAreaWithOneWildcard textArea9X;
     touchgfx::TextAreaWithOneWildcard textArea10X;
     touchgfx::TextAreaWithOneWildcard textAreaLX;
+    //touchgfx::TextAreaWithOneWildcard textArray[10] = {textArea1X, textArea2X, textArea3X, textArea4X, textArea5X, textArea6X, textArea7X, textArea8X, textArea9X, textArea10X};
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTAREA1X_SIZE = 4;
+    static const uint16_t TEXTAREA1X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea1XBuffer[TEXTAREA1X_SIZE];
-    static const uint16_t TEXTAREA2X_SIZE = 4;
+    static const uint16_t TEXTAREA2X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea2XBuffer[TEXTAREA2X_SIZE];
-    static const uint16_t TEXTAREA3X_SIZE = 4;
+    static const uint16_t TEXTAREA3X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea3XBuffer[TEXTAREA3X_SIZE];
-    static const uint16_t TEXTAREA4X_SIZE = 4;
+    static const uint16_t TEXTAREA4X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea4XBuffer[TEXTAREA4X_SIZE];
-    static const uint16_t TEXTAREA5X_SIZE = 4;
+    static const uint16_t TEXTAREA5X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea5XBuffer[TEXTAREA5X_SIZE];
-    static const uint16_t TEXTAREA6X_SIZE = 4;
+    static const uint16_t TEXTAREA6X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea6XBuffer[TEXTAREA6X_SIZE];
-    static const uint16_t TEXTAREA7X_SIZE = 4;
+    static const uint16_t TEXTAREA7X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea7XBuffer[TEXTAREA7X_SIZE];
-    static const uint16_t TEXTAREA8X_SIZE = 4;
+    static const uint16_t TEXTAREA8X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea8XBuffer[TEXTAREA8X_SIZE];
-    static const uint16_t TEXTAREA9X_SIZE = 4;
+    static const uint16_t TEXTAREA9X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea9XBuffer[TEXTAREA9X_SIZE];
-    static const uint16_t TEXTAREA10X_SIZE = 4;
+    static const uint16_t TEXTAREA10X_SIZE = 10;
     touchgfx::Unicode::UnicodeChar textArea10XBuffer[TEXTAREA10X_SIZE];
     static const uint16_t TEXTAREALX_SIZE = 4;
     touchgfx::Unicode::UnicodeChar textAreaLXBuffer[TEXTAREALX_SIZE];
 
+    touchgfx::Unicode::UnicodeChar* bufferArray[10] = {textArea1XBuffer, textArea2XBuffer, textArea3XBuffer, textArea4XBuffer, textArea5XBuffer, textArea6XBuffer, textArea7XBuffer, textArea8XBuffer, textArea9XBuffer, textArea10XBuffer};
 private:
 
     /*

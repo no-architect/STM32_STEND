@@ -123,5 +123,259 @@ void CustomContainer0::setListElements(int item)
 	textArea9X.invalidate();
 	textArea10X.invalidate();
 	textAreaLX.invalidate();
+}
+
+void CustomContainer0::setCheckElement1(int item, float temp)
+{
+	Unicode::snprintfFloat(textArea1XBuffer, 10, "%3.1f", temp);
+	textArea1X.invalidate();
+	if (temp < 20 || temp > 30)
+	{
+		if (temp < 0 || temp > 99)
+		{
+			Unicode::snprintfFloat(textArea1XBuffer, 10, "%3.1f", 0.0);
+		}
+		textArea1X.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		textArea1X.invalidate();
+		btnTempSelCont1.forceState(false);
+		btnTempSelCont1.invalidate();
+	}
+}
+void CustomContainer0::setCheckElement2(int item, float temp)
+{
+	Unicode::snprintfFloat(textArea2XBuffer, 10, "%3.1f", temp);
+	textArea2X.invalidate();
+	if (temp < 20 || temp > 30)
+	{
+		if (temp < 0 || temp > 99)
+		{
+			Unicode::snprintfFloat(textArea2XBuffer, 10, "%3.1f", 0.0);
+		}
+		textArea2X.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		textArea2X.invalidate();
+		btnTempSelCont2.forceState(false);
+		btnTempSelCont2.invalidate();
+	}
+}
+void CustomContainer0::setCheckElement3(int item, float temp)
+{
+	Unicode::snprintfFloat(textArea3XBuffer, TEXTAREA3X_SIZE, "%3.1f", temp);
+	textArea3X.invalidate();
+	if (temp < 20 || temp > 30)
+	{
+		if (temp < 0 || temp > 99)
+		{
+			Unicode::snprintfFloat(textArea3XBuffer, TEXTAREA1X_SIZE, "%3.1f", 0.0);
+		}
+		textArea3X.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+		textArea3X.invalidate();
+		btnTempSelCont3.forceState(false);
+		btnTempSelCont3.invalidate();
+	}
+}
+void CustomContainer0::setTempCheckElement(int index, float temp, float minTemp, float maxTemp)
+{
+	float prom;
+	if (temp < 0)				//- если измеренная температура слишком маленькая, чтобы быть правдой
+	{
+		prom = -0.0;			//- устанавливаем текущее зачение в -0.0
+	}
+	else if (temp > 99.9)		//- если измеренная температура слишком большая, чтобы быть правдой
+	{
+		prom = 99.9;			//- устанавливаем текущее значение в 99.9
+	}
+	else						//- если измеренная температура корректна
+	{
+		prom = temp;			//- устанавливаем текущее значение в измеренное
+	}
+
+	colortype color;			//- определяем цвет корректно измеренного значения
+
+	if ((temp < minTemp) || (temp > maxTemp))					//- если не попали в ворота
+	{
+		color = touchgfx::Color::getColorFromRGB(255, 0, 0);	//- цвет = красный
+	}
+	else														//- если в норме
+	{
+		color = touchgfx::Color::getColorFromRGB(0, 255, 0);	//- цвет = зеленый
+	}
+
+	switch (index)
+	{
+		case 0:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont1.forceState(false);
+				btnTempSelCont1.invalidate();
+			}
+			textArea1X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea1X.invalidate();										//- обновить надпись
+			break;
+		case 1:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont2.forceState(false);
+				btnTempSelCont2.invalidate();
+			}
+			textArea2X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea2X.invalidate();										//- обновить надпись
+			break;
+		case 2:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont3.forceState(false);
+				btnTempSelCont3.invalidate();
+			}
+			textArea3X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea3X.invalidate();										//- обновить надпись
+			break;
+		case 3:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont4.forceState(false);
+				btnTempSelCont4.invalidate();
+			}
+			textArea4X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea4X.invalidate();										//- обновить надпись
+			break;
+		case 4:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont5.forceState(false);
+				btnTempSelCont5.invalidate();
+			}
+			textArea5X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea5X.invalidate();										//- обновить надпись
+			break;
+		case 5:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont6.forceState(false);
+				btnTempSelCont6.invalidate();
+			}
+			textArea6X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea6X.invalidate();										//- обновить надпись
+			break;
+		case 6:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont7.forceState(false);
+				btnTempSelCont7.invalidate();
+			}
+			textArea7X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea7X.invalidate();										//- обновить надпись
+			break;
+		case 7:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont8.forceState(false);
+				btnTempSelCont8.invalidate();
+			}
+			textArea8X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea8X.invalidate();										//- обновить надпись
+			break;
+		case 8:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont9.forceState(false);
+				btnTempSelCont9.invalidate();
+			}
+			textArea9X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea9X.invalidate();										//- обновить надпись
+			break;
+		default:
+			if (color == touchgfx::Color::getColorFromRGB(255, 0, 0))
+			{
+				btnTempSelCont10.forceState(false);
+				btnTempSelCont10.invalidate();
+			}
+			textArea10X.setColor(color);										//- надпись соответствующим цветом
+			Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+			textArea10X.invalidate();										//- обновить надпись
+			break;
+	}
+
+	//textArray[index].setColor(color);
+	//Unicode::snprintfFloat(bufferArray[index], 10, "%3.1f", prom);	//- отрисовать соответствующую температуру
+	//textArray[index].invalidate();
+
+	/*
+	textArea2X.invalidate();
+	textArea3X.invalidate();
+	textArea4X.invalidate();
+	textArea5X.invalidate();
+	textArea6X.invalidate();
+	textArea7X.invalidate();
+	textArea8X.invalidate();
+	textArea9X.invalidate();
+	textArea10X.invalidate();
+	*/
+}
+
+void CustomContainer0::setTempUnCheckElement(int index)
+{
+	switch (index)
+		{
+			case 0:
+				textArea1X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea1X.invalidate();												//- обновить надпись
+				break;
+			case 1:
+				textArea2X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea2X.invalidate();												//- обновить надпись
+				break;
+			case 2:
+				textArea3X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea3X.invalidate();												//- обновить надпись
+				break;
+			case 3:
+				textArea4X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea4X.invalidate();												//- обновить надпись
+				break;
+			case 4:
+				textArea5X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea5X.invalidate();												//- обновить надпись
+				break;
+			case 5:
+				textArea6X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea6X.invalidate();												//- обновить надпись
+				break;
+			case 6:
+				textArea7X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea7X.invalidate();												//- обновить надпись
+				break;
+			case 7:
+				textArea8X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea8X.invalidate();												//- обновить надпись
+				break;
+			case 8:
+				textArea9X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea9X.invalidate();												//- обновить надпись
+				break;
+			default:
+				textArea10X.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));	//- надпись соответствующим цветом
+				Unicode::snprintf(bufferArray[index], 10, "%s", "-");					//- отрисовать соответствующую температуру
+				textArea10X.invalidate();												//- обновить надпись
+				break;
+		}
 
 }
+

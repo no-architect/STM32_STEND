@@ -90,12 +90,15 @@ Screen2ViewBase::Screen2ViewBase() :
     textArea7.setWildcard(textArea7Buffer);
     textArea7.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VJX3));
 
-    textArea8.setPosition(368, 228, 108, 25);
+    textArea8.setPosition(368, 227, 108, 25);
     textArea8.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea8.setLinespacing(0);
     Unicode::snprintf(textArea8Buffer, TEXTAREA8_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DWGX).getText());
     textArea8.setWildcard(textArea8Buffer);
     textArea8.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YOYL));
+
+    toggleButton1.setXY(374, 191);
+    toggleButton1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_RE_SMALL_BUTTON_OFF_ID), touchgfx::Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_RE_SMALL_BUTTON_ON_ID));
 
     add(__background);
     add(box1);
@@ -110,6 +113,7 @@ Screen2ViewBase::Screen2ViewBase() :
     add(textArea6);
     add(textArea7);
     add(textArea8);
+    add(toggleButton1);
 }
 
 void Screen2ViewBase::setupScreen()

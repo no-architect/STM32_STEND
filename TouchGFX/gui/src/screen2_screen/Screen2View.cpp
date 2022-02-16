@@ -26,9 +26,49 @@ void Screen2View::scrollList1UpdateItem(CustomContainer0& item, int16_t itemInde
 
 void Screen2View::checkALL()
 {
+	float primer;
+
+	primer = 24.5;
 	int prom = scrollList1ListItems[0].getListElementsCheck();
 	Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%d", prom);
 	textArea1.invalidate();
+
+	if (prom > 1024)
+	{
+		prom -= 1024;
+	}
+	int i;
+	int j;
+	int maska = 512;
+
+	for (j=0; j<7; j++)
+	{
+		for (i=0; i<10;i++)
+		{
+			if (prom & maska)		//- если ячейка выбрана для замера температуры
+			{
+				primer = presenter->getIndexTempValue(9-i);
+				scrollList1ListItems[j].setTempCheckElement(9-i, primer, 20.1, 30.1);
+			}
+			else 					//- если ячейка НЕ выбрана для замера температуры
+			{
+				scrollList1ListItems[j].setTempUnCheckElement(9-i);
+			}
+			maska>>=1;
+		}
+	}
+/*
+	if (prom%2 == 1)
+	{
+		primer = presenter->getIndexTempValue(0x00);
+		scrollList1ListItems[0].setCheckElement1(0, primer);
+	}
+
+	if (prom%4 > 1)
+	{
+		primer = presenter->getIndexTempValue(0x01);
+		scrollList1ListItems[0].setCheckElement2(0, primer);
+	}
 
 	prom = scrollList1ListItems[1].getListElementsCheck();
 	Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%d", prom);
@@ -55,11 +95,12 @@ void Screen2View::checkALL()
 	textArea7.invalidate();
 
 	presenter->saveIndexTemp(0x00);
-	float primer;
-	primer = presenter->getIndexTempValue();
-	Unicode::snprintfFloat(textArea8Buffer, TEXTAREA8_SIZE, "%6.4f", prom);
+
+	primer = presenter->getIndexTempValue(0x00);
+	Unicode::snprintfFloat(textArea8Buffer, TEXTAREA8_SIZE, "%6.4f", primer);
 	textArea8.invalidate();
 	//float value = getTempIndexValue(1);
+*/
 
 }
 

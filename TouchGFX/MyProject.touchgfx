@@ -3862,7 +3862,7 @@
             "Type": "TextArea",
             "Name": "textArea8",
             "X": 368,
-            "Y": 228,
+            "Y": 227,
             "Width": 108,
             "Height": 25,
             "TextId": "__SingleUse_YOYL",
@@ -3872,6 +3872,16 @@
               "UseBuffer": true,
               "BufferSize": 10
             }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 374,
+            "Y": 191,
+            "Width": 96,
+            "Height": 38,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_RE_small_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_RE_small_button_OFF.png"
           }
         ],
         "Interactions": [
@@ -4160,7 +4170,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_K6OT",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4175,7 +4185,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_8H2Z",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4190,7 +4200,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_LPDJ",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4205,7 +4215,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_5GNC",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4220,7 +4230,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_A03K",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4235,7 +4245,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_WGMM",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4250,7 +4260,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_29CQ",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4265,7 +4275,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_ADYJ",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4280,7 +4290,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_XXZS",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {
@@ -4295,7 +4305,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_ICW2",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 10
             }
           },
           {

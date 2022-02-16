@@ -56,6 +56,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard textArea6;
     touchgfx::TextAreaWithOneWildcard textArea7;
     touchgfx::TextAreaWithOneWildcard textArea8;
+    touchgfx::ToggleButton toggleButton1;
 
     /*
      * Wildcard Buffers

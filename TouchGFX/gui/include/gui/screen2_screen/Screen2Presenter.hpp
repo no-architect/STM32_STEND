@@ -42,9 +42,9 @@ public:
     {
     	return model->getIndexTemp();
     }
-    float getIndexTempValue()
+    float getIndexTempValue(int valval0)
     {
-    	return model->getIndexTempValue();
+    	return model->getTempIndexValue(valval0);
     }
 
 private:

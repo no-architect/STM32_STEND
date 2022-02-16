@@ -13,7 +13,11 @@ public:
 
     void setListElements(int item);
     void setListElementsCheck(int item, bool check);
-
+    void setCheckElement1(int item, float temp);
+    void setCheckElement2(int item, float temp);
+    void setCheckElement3(int item, float temp);
+    void setTempCheckElement(int index, float temp, float minTemp, float maxTemp);
+    void setTempUnCheckElement(int index);
     int getListElementsCheck();
 protected:
 };
